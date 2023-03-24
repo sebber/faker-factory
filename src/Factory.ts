@@ -1,36 +1,44 @@
 import { faker, Faker } from "@faker-js/faker";
 
-export type FactoryBlueprint<T> = (faker: Faker) => T;
+export type FactoryBlueprint<TItem> = (faker: Faker) => TItem;
 
-export interface FactoryDefinition<T> {
-  make(fields?: Partial<T>): T;
-  makeMany(howMany: number): T[];
-  with<T2>(fields: T2): FactoryDefinition<T & T2>;
+export interface FactoryDefinition<TItem> {
+  make(fields?: Partial<TItem>): TItem;
+  makeMany(howMany: number): TItem[];
+  with<TItemExtension>(
+    fields: TItemExtension
+  ): FactoryDefinition<TItem & TItemExtension>;
 }
 
-function makeOne<T>(blueprint: FactoryBlueprint<T>): T {
+function makeOne<TItem>(blueprint: FactoryBlueprint<TItem>): TItem {
   return blueprint(faker);
 }
 
-function makeMany<T>(blueprint: FactoryBlueprint<T>, howMany: number): T[] {
+function makeMany<TItem>(
+  blueprint: FactoryBlueprint<TItem>,
+  howMany: number
+): TItem[] {
   return [...Array(howMany).keys()].map(() => blueprint(faker));
 }
 
-function withFields<T>(blueprint: FactoryBlueprint<T>, fields: Partial<T>): T {
-  return Factory<T>(() => ({
+function withFields<TItem>(
+  blueprint: FactoryBlueprint<TItem>,
+  fields: Partial<TItem>
+): TItem {
+  return Factory<TItem>(() => ({
     ...blueprint(faker),
     ...fields,
   })).make();
 }
 
-export function Factory<T>(
-  blueprint: FactoryBlueprint<T>
-): FactoryDefinition<T> {
+export function Factory<TItem>(
+  blueprint: FactoryBlueprint<TItem>
+): FactoryDefinition<TItem> {
   return {
-    make: (fields?: Partial<T>) =>
+    make: (fields?: Partial<TItem>) =>
       fields ? withFields(blueprint, fields) : makeOne(blueprint),
     makeMany: (howMany) => makeMany(blueprint, howMany),
-    with: <T2>(fields: T2) => {
+    with: <TItemExtension>(fields: TItemExtension) => {
       return Factory(() => ({
         ...blueprint(faker),
         ...fields,
