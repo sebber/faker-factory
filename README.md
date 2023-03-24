@@ -7,6 +7,11 @@ The goal of this project is to make a tool to easily write blueprints for genera
 ```typescript
 import { Factory } from "@sebber/faker-factory";
 
+type Car = {
+  maker: string;
+  modelYear: number;
+};
+
 // You can create a factory by defining a blueprint for something
 // you would like to generate
 const carFactory = Factory<Car>((faker) => ({
