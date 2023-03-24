@@ -34,6 +34,14 @@ describe("Factory, given a blueprint of Car", () => {
     });
   });
 
+  it<TestContext>("should be able take overrides for fields when making one", ({
+    carFactory,
+  }) => {
+    const volvo = carFactory.make({ maker: "Volvo Cars" });
+
+    expect(volvo.maker).toBe("Volvo Cars");
+  });
+
   it<TestContext>("should be extendable for more detailed specifics", ({
     carFactory,
   }) => {

@@ -27,10 +27,15 @@ console.log(car); // { maker: some maker, modelYear: some model year }
 const cars = carFactory.makeMany(5);
 console.log(cars); // [{ maker: some maker, modelYear: some model year }, ...]
 
-// You can also extend existing factories for more specific use cases
-// either by adding new fields or overwriting existing.
+// You can also extend existing factories tp make a new one for more
+// specific use cases either by adding new fields or overwriting existing
 const volvoFactory = carFactory.with({ maker: "Volvo Cars" });
 const volvo = volvoFactory.make();
+console.log(car); // { maker: "Volvo Cars", modelYear: some model year }
+
+// or just overwriting existing fields just once
+// with which you could make one
+const car = carFactory.make({ maker: "Volvo Cars" });
 console.log(car); // { maker: "Volvo Cars", modelYear: some model year }
 ```
 
