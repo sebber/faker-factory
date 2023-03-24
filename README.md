@@ -36,10 +36,14 @@ console.log(car); // { maker: "Volvo Cars", modelYear: some model year }
 
 ## Appreciations
 
+- [Faker](https://github.com/faker-js/faker)
+
+Thank you to all the people behind `Faker` for your work to create and maintain what is utterly essential for `Faker Factory` to even be possible!
+
 - [Laravel](https://laravel.com/)
 
-As mentioned, Laravel was a big inspiration for me and how I learned to appreciate writing tests at all.
+As mentioned, `Laravel` was a big inspiration for me and how I learned to appreciate writing tests at all.
 
 - [Matt Pocock](https://www.mattpocock.com/)
 
-To even get started with a sane base for making a proper published package, I stole heavily from Matt Pocock.
+To even get started with a sane base for making a proper published package, I stole heavily from `Matt Pocock`.

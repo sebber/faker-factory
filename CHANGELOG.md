@@ -1,5 +1,11 @@
 # @sebber/faker-factory
 
+## 0.1.2
+
+### Patch Changes
+
+- Edit Readme and Add a LICENSE file
+
 ## 0.1.1
 
 ### Patch Changes
