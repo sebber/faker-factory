@@ -38,7 +38,7 @@ console.log(car); // { maker: "Volvo Cars", modelYear: some model year }
 
 - [Laravel](https://laravel.com/)
 
-As mentioned, Laravel was a big inspirations for me and how I learned to appreciate writing tests at all.
+As mentioned, Laravel was a big inspiration for me and how I learned to appreciate writing tests at all.
 
 - [Matt Pocock](https://www.mattpocock.com/)
 
