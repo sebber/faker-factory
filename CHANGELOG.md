@@ -1,5 +1,11 @@
 # @sebber/faker-factory
 
+## 0.2.0
+
+### Minor Changes
+
+- Added support to overwrite existing fields when making one item
+
 ## 0.1.2
 
 ### Patch Changes
