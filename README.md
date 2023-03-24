@@ -1,6 +1,6 @@
 # Faker Factory
 
-The goal of this project is to make a tool to easily write blueprints for generating data, mainly for testing purposes, that I am working on. Heavily inspired by my experience and patterns I learned to appreciate while using and writing tests with [Laravel](https://laravel.com/)!
+The goal of this project is, by wrapping [Faker](https://github.com/faker-js/faker), to make a tool to easily write blueprints for generating data, mainly for testing purposes. Heavily inspired by my experience and patterns I learned to appreciate while using and writing tests with [Laravel](https://laravel.com/)!
 
 ## Example
 
