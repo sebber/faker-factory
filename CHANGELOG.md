@@ -1,5 +1,11 @@
 # @sebber/faker-factory
 
+## 0.2.1
+
+### Patch Changes
+
+- Added some project information to package.json
+
 ## 0.2.0
 
 ### Minor Changes
