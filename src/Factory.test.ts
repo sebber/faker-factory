@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { Factory, FactoryDefinition } from "./Factory";
 
 type Car = {
@@ -38,7 +38,6 @@ describe("Factory, given a blueprint of Car", () => {
     carFactory,
   }) => {
     const volvo = carFactory.make({ maker: "Volvo Cars" });
-
     expect(volvo.maker).toBe("Volvo Cars");
   });
 
