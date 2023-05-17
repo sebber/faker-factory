@@ -37,14 +37,10 @@ function produce<TItem>(plan: Plan<TItem>): TItem {
   const item = {} as TItem;
 
   const blueprint = plan(faker);
-  Object.keys(blueprint).forEach((key) => {
-    const fieldValue = blueprint[key];
+  (Object.keys(blueprint) as Array<keyof TItem>).forEach((key) => {
+    const fieldValue = blueprint[key] as FieldValue<TItem>;
 
-    if (typeof fieldValue === "function") {
-      item[key] = fieldValue();
-    } else {
-      item[key] = fieldValue;
-    }
+    item[key] = fieldValue instanceof Function ? fieldValue() : fieldValue;
   });
 
   return item;
