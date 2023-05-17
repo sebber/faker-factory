@@ -1,5 +1,11 @@
 # @sebber/faker-factory
 
+## 0.3.0
+
+### Minor Changes
+
+- Refactor to support lazy field initializing
+
 ## 0.2.1
 
 ### Patch Changes
