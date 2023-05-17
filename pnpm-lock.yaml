@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@faker-js/faker':
-    specifier: ^7.6.0
-    version: 7.6.0
+    specifier: ^8.0.1
+    version: 8.0.1
 
 devDependencies:
   '@changesets/cli':
@@ -632,9 +632,9 @@ packages:
     dev: true
     optional: true
 
-  /@faker-js/faker@7.6.0:
-    resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
-    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+  /@faker-js/faker@8.0.1:
+    resolution: {integrity: sha512-kbh5MenpTN9U0B4QcOI1NoTPlZHniSYQ3BHbhAnPjJGAmmFqxoxTE4sGdpy7ZOO9038DPGCuhXyMkjOr05uVwA==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
     dev: false
 
   /@jridgewell/sourcemap-codec@1.4.15:

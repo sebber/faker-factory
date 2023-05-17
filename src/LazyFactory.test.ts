@@ -13,7 +13,9 @@ describe("Lazy Factory, given a blueprint of Car", () => {
     ctx.carFactory = Factory<Car>((faker) => ({
       maker: () => faker.company.name(),
       modelYear: () =>
-        faker.date.between("1769-01-01", new Date()).getFullYear(),
+        faker.date
+          .between({ from: "1769-01-01", to: new Date() })
+          .getFullYear(),
     }));
   });
 

@@ -12,15 +12,14 @@ describe("Basic Factory, given a blueprint of Car", () => {
   beforeEach<TestContext>((ctx) => {
     ctx.carFactory = Factory<Car>((faker) => ({
       maker: faker.company.name(),
-      modelYear: faker.date.between("1769-01-01", new Date()).getFullYear(),
+      modelYear: faker.date
+        .between({ from: "1769-01-01", to: new Date() })
+        .getFullYear(),
     }));
   });
 
   it<TestContext>("should be able to create one Car", ({ carFactory }) => {
     const car = carFactory.make();
-
-    console.log(car);
-
     expect(typeof car.maker).toBe(typeof "string");
     expect(typeof car.modelYear).toBe(typeof 1);
   });
